@@ -1,0 +1,31 @@
+{
+  "ssm:account=864771865616:parameterName=/usyd/resources/vpc-id:region=ap-southeast-2": "vpc-ee1ab389",
+  "availability-zones:account=864771865616:region=ap-southeast-2": [
+    "ap-southeast-2a",
+    "ap-southeast-2b",
+    "ap-southeast-2c"
+  ],
+  "ssm:account=864771865616:parameterName=/usyd/resources/subnets/public/all-ids:region=ap-southeast-2": "subnet-cc8fe4ab,subnet-5e167217",
+  "ssm:account=864771865616:parameterName=/usyd/resources/subnets/private/all-ids:region=ap-southeast-2": "subnet-308fe457,subnet-070a6e4e",
+  "ssm:account=864771865616:parameterName=/usyd/resources/subnets/isolated/all-ids:region=ap-southeast-2": "subnet-0679ffa3a87e706aa,subnet-09927db5d9827566f",
+  "ssm:account=864771865616:parameterName=/usyd/resources/eip-dns/queue/arn:region=ap-southeast-2": "arn:aws:sqs:ap-southeast-2:057594643941:QEIPDQUDnsEvents.fifo",
+  "acknowledged-issue-numbers": [25356, 25356],
+  "ssm:account=621110607135:parameterName=/usyd/resources/vpc-id:region=ap-southeast-2": "vpc-2db2144a",
+  "ssm:account=621110607135:parameterName=/usyd/resources/subnets/public/all-ids:region=ap-southeast-2": "subnet-3181e356,subnet-428d120b,subnet-6b29c133",
+  "ssm:account=621110607135:parameterName=/usyd/resources/subnets/private/all-ids:region=ap-southeast-2": "subnet-ec80e28b,subnet-7786193e,subnet-942dc5cc",
+  "ssm:account=621110607135:parameterName=/usyd/resources/subnets/isolated/all-ids:region=ap-southeast-2": "subnet-05eb96bdf716f8a88,subnet-0875d5698c626a1c0,subnet-0a8fbd560b250797a",
+  "availability-zones:account=621110607135:region=ap-southeast-2": [
+    "ap-southeast-2a",
+    "ap-southeast-2b",
+    "ap-southeast-2c"
+  ],
+  "ssm:account=711219499793:parameterName=/usyd/resources/vpc-id:region=ap-southeast-2": "vpc-54fc5833",
+  "ssm:account=711219499793:parameterName=/usyd/resources/subnets/public/all-ids:region=ap-southeast-2": "subnet-9dd2b2fa,subnet-9976ebd0,subnet-04fd145c",
+  "ssm:account=711219499793:parameterName=/usyd/resources/subnets/private/all-ids:region=ap-southeast-2": "subnet-72d7b715,subnet-4774e90e,subnet-21fb1279",
+  "ssm:account=711219499793:parameterName=/usyd/resources/subnets/isolated/all-ids:region=ap-southeast-2": "subnet-0e715e5da4f6638cc,subnet-02b7a776cf9c98c43,subnet-09b834eeb0abb7d71",
+  "availability-zones:account=711219499793:region=ap-southeast-2": [
+    "ap-southeast-2a",
+    "ap-southeast-2b",
+    "ap-southeast-2c"
+  ]
+}

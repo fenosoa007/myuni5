@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:tns="http://au.edu.sydney/ws/sitsinterfaces/odsprocesses/coursesservice/1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://au.edu.sydney/schema/sitsinterfaces/odsprocesses/coursesservice/1.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://au.edu.sydney/ws/sitsinterfaces/odsprocesses/coursesservice/1.0">
+    <wsdl:types>
+        <xsd:schema xmlns:tns="http://au.edu.sydney/schema/sitsinterfaces/odsprocesses/coursesservice/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/1999/XSL/Transform" targetNamespace="http://au.edu.sydney/schema/sitsinterfaces/odsprocesses/coursesservice/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xsd:complexType name="course">
+                <xsd:all>
+                    <xsd:element name="abbreviationCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="combCourseIndicator" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="courseCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="courseCreditPts" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="courseGroup" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="courseGroupName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="courseTitle" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="courseYearOfferings" type="tns:courseYearOfferings" minOccurs="0"/>
+                    <xsd:element name="createdByID" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="createdByName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="createdDateTime" nillable="true" type="xsd:dateTime" minOccurs="0"/>
+                    <xsd:element name="cricosCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="cricosEndDate" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="cricosStartDate" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="departmentCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="departmentName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="domesticDisclaimers" type="tns:domDisclaimers" minOccurs="0"/>
+                    <xsd:element name="dualFeeCourses" type="tns:dualFeeCourses" minOccurs="0"/>
+                    <xsd:element name="entryRequirements" type="tns:entryRequirements" minOccurs="0"/>
+                    <xsd:element name="exchangeCoursesIndicator" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="facultyCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="facultyName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="fees" type="tns:fees" minOccurs="0"/>
+                    <xsd:element name="fullTimeLoad" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="honoursIndicator" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="inUse" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="internationalDisclaimers" type="tns:intDisclaimers" minOccurs="0"/>
+                    <xsd:element name="isPublishable" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="lastModifiedDateTime" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="lastPublishedByID" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="lastPublishedByName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="lastPublishedDateTime" nillable="true" type="xsd:dateTime" minOccurs="0"/>
+                    <xsd:element name="lengthYear" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="programCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="programName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="publicationCeaseDate" nillable="true" type="xsd:date" minOccurs="0"/>
+                    <xsd:element name="publicationCode" type="xsd:string"/>
+                    <xsd:element name="publicationFromDate" nillable="true" type="xsd:date" minOccurs="0"/>
+                    <xsd:element name="publicationStatus" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="publicationTitle" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="qualificationAim" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="qualificationName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeElements" type="tns:routeElements" minOccurs="0"/>
+                    <xsd:element name="routeName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeType" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeTypeName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="sharedPathways" type="tns:sharedPathways" minOccurs="0"/>
+                    <xsd:element name="specialCourseType" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="specialCourseTypeName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="studyAbroadIndicator" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="uacCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="uosList" type="tns:uosList" minOccurs="0"/>
+                    <xsd:element name="updatedByID" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="updatedByName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="updatedDateTime" nillable="true" type="xsd:dateTime" minOccurs="0"/>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="courseCurrentUosRequest">
+                <xsd:sequence>
+                    <xsd:element name="publicationCode" type="xsd:string"/>
+                    <xsd:element name="academicYear" type="xsd:string"/>
+                    <xsd:element name="lastModifiedDate" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="startRecord" nillable="true" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="numberOfRecords" nillable="true" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="courseCurrentUosResponse">
+                <xsd:sequence>
+                    <xsd:element name="uos" type="tns:uosCurrent" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element name="serviceInfo" type="tns:serviceInfo" minOccurs="0"/>
+                    <xsd:element name="serviceError" type="tns:serviceError" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="courseOffering">
+                <xsd:sequence>
+                    <xsd:element name="publicationCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="academicYear" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="offeredIndicator" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="courseRouteElementRequest">
+                <xsd:sequence>
+                    <xsd:element name="publicationCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="pathwayCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="academicYear" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="lastModifiedDate" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="startRecord" nillable="true" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="numberOfRecords" nillable="true" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="courseRouteElementResponse">
+                <xsd:sequence>
+                    <xsd:element name="publication" type="tns:publicationRouteElement" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element name="serviceInfo" type="tns:serviceInfo" minOccurs="0"/>
+                    <xsd:element name="serviceError" type="tns:serviceError" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="courseYearOfferings">
+                <xsd:sequence>
+                    <xsd:element name="courseOffering" type="tns:courseOffering" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="coursesRequest">
+                <xsd:sequence>
+                    <xsd:element name="publicationCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="inUse" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="isPublishable" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="department" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="faculty" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="lastModifiedDate" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="startRecord" nillable="true" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="numberOfRecords" nillable="true" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="coursesResponse">
+                <xsd:sequence>
+                    <xsd:element name="course" type="tns:course" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element name="serviceInfo" type="tns:serviceInfo" minOccurs="0"/>
+                    <xsd:element name="serviceError" type="tns:serviceError" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="disclaimerTexts">
+                <xsd:sequence>
+                    <xsd:element name="disclaimerCode" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="domDisclaimers">
+                <xsd:sequence>
+                    <xsd:element name="domDisclaimerCode" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="dualFeeCourse">
+                <xsd:sequence>
+                    <xsd:element name="dualFeePublicationCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="inUse" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="dualFeeCourses">
+                <xsd:sequence>
+                    <xsd:element name="dualFeeCourse" type="tns:dualFeeCourse" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="entryRequirement">
+                <xsd:all>
+                    <xsd:element name="courseCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="cspIndicator" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="entryReqCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="entryReqCodeDesc" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="reviewStatus" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="score" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="uddText" type="xsd:string" minOccurs="0"/>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="entryRequirements">
+                <xsd:sequence>
+                    <xsd:element name="yearlyRequirement" type="tns:yearlyRequirement" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="fee">
+                <xsd:all>
+                    <xsd:element name="amount" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="disclaimerTexts" type="tns:disclaimerTexts" minOccurs="0"/>
+                    <xsd:element name="feeTypeCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="feeTypeCodeDesc" type="xsd:string" minOccurs="0"/>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="fees">
+                <xsd:sequence>
+                    <xsd:element name="yearlyFee" type="tns:yearlyFee" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="intDisclaimers">
+                <xsd:sequence>
+                    <xsd:element name="intDisclaimerCode" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="publicationRouteElement">
+                <xsd:sequence>
+                    <xsd:element name="publicationCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="yearlyRouteElement" type="tns:yearlyRouteSubjectArea" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="routeElement">
+                <xsd:all>
+                    <xsd:element name="isPathwayInUse" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="isPathwayPublishable" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="pathwayCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="sequenceNumber" type="xsd:string" minOccurs="0"/>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="routeElements">
+                <xsd:sequence>
+                    <xsd:element name="yearlyRouteElement" type="tns:yearlyRouteElement" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="routeSubjectArea">
+                <xsd:sequence>
+                    <xsd:element name="routeCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="sequenceNumber" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="pathwayCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="validFromDate" nillable="true" type="xsd:date" minOccurs="0"/>
+                    <xsd:element name="validToDate" nillable="true" type="xsd:date" minOccurs="0"/>
+                    <xsd:element name="status" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="statusDesc" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="category1" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="category2" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="lastModifiedDate" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="serviceError">
+                <xsd:sequence>
+                    <xsd:element name="code" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="text" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="serviceInfo">
+                <xsd:all>
+                    <xsd:element name="firstRecord" nillable="true" type="xsd:integer" minOccurs="0"/>
+                    <xsd:element name="lastRecord" nillable="true" type="xsd:integer" minOccurs="0"/>
+                    <xsd:element name="timestampNow" nillable="true" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="totalRecords" nillable="true" type="xsd:integer" minOccurs="0"/>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="sharedPathway">
+                <xsd:all>
+                    <xsd:element name="isPathwayInUse" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="isPathwayPublishable" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="pathwayCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="sequenceNumber" type="xsd:string" minOccurs="0"/>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="sharedPathways">
+                <xsd:sequence>
+                    <xsd:element name="yearlyRouteElement" type="tns:yearlySharedPathway" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="uos">
+                <xsd:all>
+                    <xsd:element name="uosCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="uosType" type="xsd:string" minOccurs="0"/>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="uosCurrent">
+                <xsd:all>
+                    <xsd:element name="lastModifiedDate" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="publicationCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="uosCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="uosType" type="xsd:string" minOccurs="0"/>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="uosList">
+                <xsd:sequence>
+                    <xsd:element name="yearlyUos" type="tns:yearlyUos" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="yearlyFee">
+                <xsd:sequence>
+                    <xsd:element name="academicYear" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="fee" type="tns:fee" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="yearlyRequirement">
+                <xsd:sequence>
+                    <xsd:element name="academicYear" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="entryRequirement" type="tns:entryRequirement" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="yearlyRouteElement">
+                <xsd:sequence>
+                    <xsd:element name="academicYear" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeElement" type="tns:routeElement" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="yearlyRouteSubjectArea">
+                <xsd:sequence>
+                    <xsd:element name="academicYear" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeElement" type="tns:routeSubjectArea" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="yearlySharedPathway">
+                <xsd:sequence>
+                    <xsd:element name="academicYear" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="routeElement" type="tns:sharedPathway" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="yearlyUos">
+                <xsd:sequence>
+                    <xsd:element name="academicYear" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="uos" type="tns:uos" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="courseCurrentUosRequest" type="tns:courseCurrentUosRequest"/>
+            <xsd:element name="courseCurrentUosResponse" type="tns:courseCurrentUosResponse"/>
+            <xsd:element name="courseRouteElementRequest" type="tns:courseRouteElementRequest"/>
+            <xsd:element name="courseRouteElementResponse" type="tns:courseRouteElementResponse"/>
+            <xsd:element name="coursesRequest" type="tns:coursesRequest"/>
+            <xsd:element name="coursesResponse" type="tns:coursesResponse"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:service name="CoursesService.serviceagent">
+        <wsdl:port name="CoursesPortTypeEndpoint0" binding="tns:CoursesPortTypeEndpoint0Binding">
+            <soap:address location="http://tibco-bw-uat-1.ucc.usyd.edu.au:9139/ODSProcesses/StarterProcesses/WebServices/Service/CoursesService.serviceagent/CoursesPortTypeEndpoint0"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="CoursesPortType">
+        <wsdl:operation name="getCourseCurrentUosList">
+            <wsdl:input message="tns:getCourseCurrentUosListRequest"/>
+            <wsdl:output message="tns:getCourseCurrentUosListResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getCourseRouteElements">
+            <wsdl:input message="tns:getCourseRouteElementsRequest"/>
+            <wsdl:output message="tns:getCourseRouteElementsResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getCourses">
+            <wsdl:input message="tns:getCoursesRequest"/>
+            <wsdl:output message="tns:getCoursesResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CoursesPortTypeEndpoint0Binding" type="tns:CoursesPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getCourseCurrentUosList">
+            <soap:operation style="document" soapAction="/ODSProcesses/StarterProcesses/WebServices/Service/CoursesService.serviceagent/CoursesPortTypeEndpoint0/getCourseCurrentUosList"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="InputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="OutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCourseRouteElements">
+            <soap:operation style="document" soapAction="/ODSProcesses/StarterProcesses/WebServices/Service/CoursesService.serviceagent/CoursesPortTypeEndpoint0/getCourseRouteElements"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="InputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="OutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCourses">
+            <soap:operation style="document" soapAction="/ODSProcesses/StarterProcesses/WebServices/Service/CoursesService.serviceagent/CoursesPortTypeEndpoint0/getCourses"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="InputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="OutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="getCourseCurrentUosListRequest">
+        <wsdl:part name="InputMsg" element="ns0:courseCurrentUosRequest"/>
+    </wsdl:message>
+    <wsdl:message name="getCourseCurrentUosListResponse">
+        <wsdl:part name="OutputMsg" element="ns0:courseCurrentUosResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getCourseRouteElementsRequest">
+        <wsdl:part name="InputMsg" element="ns0:courseRouteElementRequest"/>
+    </wsdl:message>
+    <wsdl:message name="getCourseRouteElementsResponse">
+        <wsdl:part name="OutputMsg" element="ns0:courseRouteElementResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getCoursesRequest">
+        <wsdl:part name="InputMsg" element="ns0:coursesRequest"/>
+    </wsdl:message>
+    <wsdl:message name="getCoursesResponse">
+        <wsdl:part name="OutputMsg" element="ns0:coursesResponse"/>
+    </wsdl:message>
+</wsdl:definitions>

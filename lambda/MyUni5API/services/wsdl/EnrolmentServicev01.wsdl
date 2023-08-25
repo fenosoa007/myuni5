@@ -1,0 +1,955 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://au.edu.sydney/ws/sitsinterfaces/financeservices/sitsenrolmentdetailsservice/1.0" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns0="http://au.edu.sydney/schemas/sitsinterfaces/financeservices/sitsenrolmentdetailsservice/1.0" name="Untitled" targetNamespace="http://au.edu.sydney/ws/sitsinterfaces/financeservices/sitsenrolmentdetailsservice/1.0">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eds="http://au.edu.sydney/schemas/sitsinterfaces/financeservices/sitsenrolmentdetailsservice/1.0" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://au.edu.sydney/schemas/sitsinterfaces/financeservices/sitsenrolmentdetailsservice/1.0">
+            
+  <xs:complexType name="absence_details">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="sequence" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="absence_reason" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="start_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="expected_return_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="end_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="note" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="address">
+                
+    <xs:sequence>
+                    
+      <xs:element name="contact_type" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="line1" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="line2" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="line3" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="line4" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="suburb" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="state" type="xs:string"/>
+                    
+      <xs:element name="postcode" type="xs:string"/>
+                    
+      <xs:element name="country" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="country_desc" type="xs:string"/>
+                    
+      <xs:element name="is_correspondence" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="address_list">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="address" type="eds:address"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="contact">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="contact_type" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="contact_description" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="contact_list">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="contact" type="eds:contact"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="course">
+                
+    <xs:sequence>
+                    
+      <xs:element name="course_code" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="effective_ft_years" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="latest_completion_date" type="eds:dateValue"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="course_enrolment">
+                
+    <xs:sequence>
+                    
+      <xs:element name="course_alias" type="xs:string"/>
+                    
+      <xs:element name="course_abbreviation" type="xs:string"/>
+                    
+      <xs:element name="course_name" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="course_seqn" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="candidature_key" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="candidature_name" type="xs:string"/>
+                    
+      <xs:element name="course_levelid" type="xs:string"/>
+                    
+      <xs:element name="course_level" type="xs:string"/>
+                    
+      <xs:element name="course_type" type="xs:string"/>
+                    
+      <xs:element name="is_honours_course" type="xs:string"/>
+                    
+      <xs:element name="faculty_alias" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="faculty_alias_desc" type="xs:string"/>
+                    
+      <xs:element name="enrolment_status" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="enrolment_status_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="enrolled_status_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="not_enrol_reason" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="not_enrol_reason_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="not_enrol_reason_date" type="eds:dateValue"/>
+                    
+      <xs:element name="home_campus" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="home_campus_desc" type="xs:string"/>
+                    
+      <xs:element name="is_on_showcause" type="xs:string"/>
+                    
+      <xs:element name="commencement_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="enrolment_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="earliest_completion_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="latest_completion_date" type="eds:dateValue"/>
+                    
+      <xs:element name="first_year_enrolled" type="xs:string"/>
+                    
+      <xs:element name="last_year_enrolled" type="xs:string"/>
+                    
+      <xs:element name="route" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="route_desc" type="xs:string"/>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="pathway" type="eds:pathway"/>
+                    
+      <xs:element name="yearly_enrolment_list" type="eds:yearly_enrolment_list"/>
+                    
+      <xs:element minOccurs="0" name="supervisors">
+                        
+        <xs:complexType>
+                            
+          <xs:sequence>
+                                
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="supervisor" type="eds:supervisor"/>
+                            
+          </xs:sequence>
+                        
+        </xs:complexType>
+                    
+      </xs:element>
+                    
+      <xs:element minOccurs="0" name="absence_details" type="eds:absence_details"/>
+                    
+      <xs:element minOccurs="0" name="sponsor_list">
+                        
+        <xs:complexType>
+                            
+          <xs:sequence>
+                                
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="sponsor" type="eds:sponsor"/>
+                            
+          </xs:sequence>
+                        
+        </xs:complexType>
+                    
+      </xs:element>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="course_enrolment_list">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="course_enrolment" type="eds:course_enrolment"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="courses">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="course" type="eds:course"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="current_sanctions">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sanction_stage" type="eds:sanction_stage"/>
+                    
+      <xs:element minOccurs="0" name="allow_online_library_access" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="allow_personal_timetable_access" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="allow_university_blackboard_access" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="dateValue">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="dateValue" nillable="true" type="xs:date"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="pathway">
+                
+    <xs:sequence>
+                    
+      <xs:element name="pathway_code" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="pathway_desc" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="personal_details_change">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="status_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="correct_title" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="correct_title_text" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="correct_given_names" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="correct_family_name" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="correct_gender" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="correct_date_of_birth" nillable="true" type="xs:date"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="requestCurrentEnrolledStudents">
+                
+    <xs:sequence>
+                    
+      <xs:element name="user" type="xs:string"/>
+                    
+      <xs:element name="password" type="xs:string"/>
+                    
+      <xs:element name="academic_year" nillable="true" type="xs:string"/>
+                    
+      <xs:element name="uos" nillable="true" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="occurrence" nillable="true" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="period" nillable="true" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="requestEnrolmentStudentDetails">
+                
+    <xs:sequence>
+                    
+      <xs:element name="user" type="xs:string"/>
+                    
+      <xs:element name="password" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="update_date" nillable="true" type="xs:dateTime"/>
+                    
+      <xs:element minOccurs="0" name="student_status" nillable="true" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="academic_year" nillable="true" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="faculty" nillable="true" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="course" nillable="true" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="start_record" type="xs:int"/>
+                    
+      <xs:element minOccurs="0" name="records_per_batch" type="xs:int"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="requestGetCourseEFT">
+                
+    <xs:sequence>
+                    
+      <xs:element name="SID" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="requestUpdateStudentIdentityStatus">
+                
+    <xs:sequence>
+                    
+      <xs:element name="user" type="xs:string"/>
+                    
+      <xs:element name="password" type="xs:string"/>
+                    
+      <xs:element name="SID" type="xs:string"/>
+                    
+      <xs:element name="campus_card_status" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="identity_check_status" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="responseCurrentEnrolmentList">
+                
+    <xs:sequence>
+                    
+      <xs:element name="count" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="student_id_list" type="eds:student_id_list"/>
+                    
+      <xs:element name="service_error" type="eds:service_error"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="responseGetCourseEFT">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="count" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="courses" type="eds:courses"/>
+                    
+      <xs:element minOccurs="0" name="service_error" type="eds:service_error"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="responseStudentEnrolmentDetails">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="get_student_enrolmentReturn" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="student_list" type="eds:student_list"/>
+                    
+      <xs:element minOccurs="0" name="service_info" type="eds:service_info"/>
+                    
+      <xs:element minOccurs="0" name="service_error" type="eds:service_error"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="responseUpdateStudentIdentityStatus">
+                
+    <xs:sequence>
+                    
+      <xs:element name="campus_card_update_status" type="xs:string"/>
+                    
+      <xs:element name="identity_check_update_status" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="service_error" type="eds:service_error"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="sanction_stage">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="stage_level" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="start_date" type="xs:date"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="semester_enrolment">
+                
+    <xs:sequence>
+                    
+      <xs:element name="semesterid" type="xs:string"/>
+                    
+      <xs:element name="semester_status" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="semester_status_desc" type="xs:string"/>
+                    
+      <xs:element name="semester_status_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="semester_start_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="attendance_pattern" type="xs:string"/>
+                    
+      <xs:element name="attendance_pattern_desc" type="xs:string"/>
+                    
+      <xs:element name="stage" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="load" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="progression_stage" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="stabex" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="stabex_desc" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="semester_enrolment_list">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="semester_enrolment" type="eds:semester_enrolment"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="service_error">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="text" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="service_info">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="first_record" type="xs:int"/>
+                    
+      <xs:element minOccurs="0" name="last_record" type="xs:int"/>
+                    
+      <xs:element minOccurs="0" name="total_records" type="xs:int"/>
+                    
+      <xs:element name="timestamp_now" type="xs:dateTime"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="sponsor">
+                
+    <xs:all>
+                    
+      <xs:element minOccurs="0" name="sponsor_alias" type="xs:string"/>
+                    
+      <xs:element name="sponsor_name" type="xs:string"/>
+                    
+      <xs:element name="sponsorid" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="year" type="xs:string"/>
+                
+    </xs:all>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="student_id_list">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sid" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="student_list">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="value" type="eds:value"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="student_summary">
+                
+    <xs:sequence>
+                    
+      <xs:element name="sid" type="xs:string"/>
+                    
+      <xs:element name="title" type="xs:string"/>
+                    
+      <xs:element name="family_name" type="xs:string"/>
+                    
+      <xs:element name="given_names" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="unikey" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="university_email" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="supervisor">
+                
+    <xs:sequence>
+                    
+      <xs:element name="id" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="unikey" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="type_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="title_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="firstnames" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="fullname" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="timetable_class_allocation">
+                
+    <xs:sequence>
+                    
+      <xs:element name="part_code" type="xs:string"/>
+                    
+      <xs:element name="part_title" type="xs:string"/>
+                    
+      <xs:element name="class_code" type="xs:string"/>
+                    
+      <xs:element name="class_title" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="tt_class_allocation_list">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="timetable_class_allocation" type="eds:timetable_class_allocation"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="uos_enrolment">
+                
+    <xs:sequence>
+                    
+      <xs:element minOccurs="0" name="uos_alpha" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="uos_digit" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="sessionid" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="sessionid_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="uos_occurence" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="uos_level" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="uos_level_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="campus" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="campus_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="delivery_mode" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="delivery_mode_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="enrolment_status_alias" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="enrolment_status_alias_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="enrolment_status_date" type="eds:dateValue"/>
+                    
+      <xs:element minOccurs="0" name="points_attempted" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="points_credited" nillable="true" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="weight" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="mark" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="grade_alias" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="grade_alias_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="subject_area" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="enrolment_attempts" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="is_prereq_override" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="is_special_permission" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="is_compulsory_pass" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="tt_label_code" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="tt_class_allocation_list" type="eds:tt_class_allocation_list"/>
+                    
+      <xs:element minOccurs="0" name="uos_name" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="uos_teacher_coordinator" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="facultyid" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="faculty_name" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="departmentID" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="department_name" type="xs:string"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="uos_enrolment_list">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="uos_enrolment" type="eds:uos_enrolment"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="value">
+                
+    <xs:sequence>
+                    
+      <xs:element name="sid" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="person_id" type="xs:string"/>
+                    
+      <xs:element name="last_updated" type="xs:dateTime"/>
+                    
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="title_desc" type="xs:string"/>
+                    
+      <xs:element name="family_name" type="xs:string"/>
+                    
+      <xs:element name="given_names" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="official_name" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="preferred_name" type="xs:string"/>
+                    
+      <xs:element name="date_of_birth" type="eds:dateValue"/>
+                    
+      <xs:element name="gender" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="gender_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="aboriginal_torres_strait_islander" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="aboriginal_torres_strait_islander_desc" type="xs:string"/>
+                    
+      <xs:element name="has_personal_details_change" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="personal_details_change" type="eds:personal_details_change"/>
+                    
+      <xs:element name="is_deceased" type="xs:string"/>
+                    
+      <xs:element name="first_year_enrolled" type="xs:string"/>
+                    
+      <xs:element name="result_suppression_reason" type="xs:string"/>
+                    
+      <xs:element name="visa_type" type="xs:string"/>
+                    
+      <xs:element name="is_international_compliance" type="xs:string"/>
+                    
+      <xs:element name="student_type" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="student_type_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="country_of_origin" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="country_of_origin_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="language_spoken_at_home" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="language_spoken_at_home_desc" type="xs:string"/>
+                    
+      <xs:element name="is_international" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="esos_compliance_code" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="international_type" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="international_type_desc" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="card_status" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="card_status_desc" type="xs:string"/>
+                    
+      <xs:element name="extro_login" type="xs:string"/>
+                    
+      <xs:element name="institution_email" type="xs:string"/>
+                    
+      <xs:element name="contact_list" type="eds:contact_list"/>
+                    
+      <xs:element name="address_list" type="eds:address_list"/>
+                    
+      <xs:element name="course_enrolment_list" type="eds:course_enrolment_list"/>
+                    
+      <xs:element minOccurs="0" name="transport_concession_declaration" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="is_eligible_transport_concession" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="is_AusAid" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="distance_student" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="current_sanctions" type="eds:current_sanctions"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="yearly_enrolment">
+                
+    <xs:sequence>
+                    
+      <xs:element name="academic_year" type="xs:string"/>
+                    
+      <xs:element name="enrolment_mode" type="xs:string"/>
+                    
+      <xs:element name="student_indicating_graduation" type="xs:string"/>
+                    
+      <xs:element name="wam" type="xs:string"/>
+                    
+      <xs:element name="aam" type="xs:string"/>
+                    
+      <xs:element name="yearly_attendance_pattern" type="xs:string"/>
+                    
+      <xs:element minOccurs="0" name="yearly_attendance_pattern_desc" type="xs:string"/>
+                    
+      <xs:element name="semester_enrolment_list" type="eds:semester_enrolment_list"/>
+                    
+      <xs:element name="uos_enrolment_list" type="eds:uos_enrolment_list"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:complexType name="yearly_enrolment_list">
+                
+    <xs:sequence>
+                    
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="yearly_enrolment" type="eds:yearly_enrolment"/>
+                
+    </xs:sequence>
+            
+  </xs:complexType>
+            
+  <xs:element name="enrolmentDetailsServiceFault" type="xs:anyType"/>
+            
+  <xs:element name="requestCurrentEnrolmentList" type="eds:requestCurrentEnrolledStudents"/>
+            
+  <xs:element name="requestGetCourseEFT" type="eds:requestGetCourseEFT"/>
+            
+  <xs:element name="requestStudentEnrolmentDetails" type="eds:requestEnrolmentStudentDetails"/>
+            
+  <xs:element name="requestUpdateStudentIdentityStatus" type="eds:requestUpdateStudentIdentityStatus"/>
+            
+  <xs:element name="responseCurrentEnrolmentList" type="eds:responseCurrentEnrolmentList"/>
+            
+  <xs:element name="responseGetCourseEFT" type="eds:responseGetCourseEFT"/>
+            
+  <xs:element name="responseStudentEnrolmentDetails" type="eds:responseStudentEnrolmentDetails"/>
+            
+  <xs:element name="responseUpdateStudentIdentityStatus" type="eds:responseUpdateStudentIdentityStatus"/>
+            
+  <xs:element name="student_list" type="eds:student_list"/>
+        
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="updateStudentIdentityStatusResponse">
+    <wsdl:part element="ns0:responseUpdateStudentIdentityStatus" name="OutputMsg">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCurrentEnrolmentListResponse">
+    <wsdl:part element="ns0:responseCurrentEnrolmentList" name="OutputMsg">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateStudentIdentityStatusRequest">
+    <wsdl:part element="ns0:requestUpdateStudentIdentityStatus" name="InputMsg">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStudentEnrolmentDetailsResponse">
+    <wsdl:part element="ns0:responseStudentEnrolmentDetails" name="OutputMsg">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCurrentEnrolmentListRequest">
+    <wsdl:part element="ns0:requestCurrentEnrolmentList" name="InputMsg">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCourseEFTResponse">
+    <wsdl:part element="ns0:responseGetCourseEFT" name="OutputMsg">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStudentEnrolmentDetailsRequest">
+    <wsdl:part element="ns0:requestStudentEnrolmentDetails" name="InputMsg">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCourseEFTRequest">
+    <wsdl:part element="ns0:requestGetCourseEFT" name="InputMsg">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="StudentIdentityUpdateServicePortType">
+    <wsdl:operation name="updateStudentIdentityStatus">
+      <wsdl:input message="tns:updateStudentIdentityStatusRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateStudentIdentityStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="EnrolmentDetailsServicePortType">
+    <wsdl:operation name="getStudentEnrolmentDetails">
+      <wsdl:input message="tns:getStudentEnrolmentDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getStudentEnrolmentDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentEnrolmentList">
+      <wsdl:input message="tns:getCurrentEnrolmentListRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getCurrentEnrolmentListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCourseEFT">
+      <wsdl:input message="tns:getCourseEFTRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getCourseEFTResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StudentIdentityUpdateServicePortTypeEndpointBinding" type="tns:StudentIdentityUpdateServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="updateStudentIdentityStatus">
+      <soap:operation soapAction="/FinanceServicesProcesses/StarterProcesses/WebServices/Service/SITSEnrolmentDetailsService.serviceagent/StudentIdentityUpdateServicePortTypeEndpoint/updateStudentIdentityStatus" style="document"/>
+      <wsdl:input>
+        <soap:body parts="InputMsg" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="OutputMsg" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EnrolmentDetailsServicePortTypeEndpointBinding" type="tns:EnrolmentDetailsServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getStudentEnrolmentDetails">
+      <soap:operation soapAction="/FinanceServicesProcesses/StarterProcesses/WebServices/Service/SITSEnrolmentDetailsService.serviceagent/EnrolmentDetailsServicePortTypeEndpoint/getStudentEnrolmentDetails" style="document"/>
+      <wsdl:input>
+        <soap:body parts="InputMsg" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="OutputMsg" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentEnrolmentList">
+      <soap:operation soapAction="/FinanceServicesProcesses/StarterProcesses/WebServices/Service/SITSEnrolmentDetailsService.serviceagent/EnrolmentDetailsServicePortTypeEndpoint1/getCurrentEnrolmentList" style="document"/>
+      <wsdl:input>
+        <soap:body parts="InputMsg" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="OutputMsg" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCourseEFT">
+      <soap:operation soapAction="/FinanceServicesProcesses/StarterProcesses/WebServices/Service/SITSEnrolmentDetailsService.serviceagent/EnrolmentDetailsServicePortTypeEndpoint1/getCourseEFT" style="document"/>
+      <wsdl:input>
+        <soap:body parts="InputMsg" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="OutputMsg" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SITSEnrolmentDetailsService">
+    <wsdl:port binding="tns:StudentIdentityUpdateServicePortTypeEndpointBinding" name="StudentIdentityUpdateServicePortTypeEndpoint">
+      <soap:address location="http://tibco-msg-tst-1.ucc.usyd.edu.au:9678/FinanceServicesProcesses/StarterProcesses/WebServices/Service/SITSEnrolmentDetailsService.serviceagent/StudentIdentityUpdateServicePortTypeEndpoint"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:EnrolmentDetailsServicePortTypeEndpointBinding" name="EnrolmentDetailsServicePortTypeEndpoint">
+      <soap:address location="http://uat.api.sydney.edu.au/SITSEnrolmentDetailsService/EnrolmentDetailsServicePortTypeEndpoint"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

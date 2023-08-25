@@ -1,0 +1,6 @@
+{
+  "requestContext": {
+    "resourcePath": "/api/calendar/weeks"
+  },
+  "pathParameters": { "sessions": "2023-S1C,2022-S1CIFE" }
+}
